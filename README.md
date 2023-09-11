@@ -34,7 +34,7 @@ The database folders are described as follows:
 
 ## Collaboration
 Our current collaboration is
-- Brandt Gaches, Cosmic Origins Fellow, Chalmers University of Technology, Sweden
+- Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Stefano Bovino, Assistant Professor, Italy
 - Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
@@ -93,3 +93,6 @@ If you use the Hartree-Fock computed data from [Heathcote & Valance (2018)](http
 }
 ```
 Finally, if you use any data from subsequent releases, we request that you cite the paper relevant for that release.
+
+## Support
+We acknowledge support from Chalmers University of Technology and the Chalmers Initiative on Cosmic Origins. The MP2 and CAM-B3LYP calculations were performed on the Vera computing facility managed by the Chalmers Centre for Computational Science and Engineering.
