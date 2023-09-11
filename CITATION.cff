@@ -1,71 +1,32 @@
 cff-version: 1.2.0
-title: "Astrochemistry Low-energy Electron Cross-Section database"
-message: "If you use this dataset, please cite it as below."
+message: "If you use this software, please cite it as below."
 authors:
-  - given-names: "Brandt"
-    family-names: "Gaches"
-    orcid: "https://orcid.org/0000-0003-4224-6829"
-  - given-names: "Stefano"
-    family-names: "Bovino"
-    orcid: "https://orcid.org/0000-0003-2814-6688"
-  - given-names: "Prasanta"
-    family-names: "Gorai"
-    orcid: "https://orcid.org/0000-0003-1602-6849"
-  - given-names: "Tommaso"
-    family-names: "Grassi"
-    orcid: "https://orcid.org/0000-0002-3019-1077"
-  - given-names: "Marco"
-    family-names: "Padovani"
-    orcid: "https://orcid.org/0000-0003-2303-0096"
-  - given-names: "Stefan"
-    family-names: "Geisse"
-    orcid: "https://orcid.org/0000-0002-3102-1774"
-  - given-names: "Giulia"
-    family-names: "Bovolenta"
-    orcid: "https://orcid.org/0000-0001-8908-9109"
-  - given-names: "Claire"
-    family-names: "Vallance"
-  - given-names: "David
-    family-names: "Heathcote"
-    orcid: "https://orcid.org/0000-0003-0611-8555"
-url: "http://alecs.brandt-gaches.space"
-repository: "https://github.com/AstroBrandt/ALeCS"
-date-released: 2023-10-01
+- family-names: "Lisa"
+  given-names: "Mona"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Bot"
+  given-names: "Hew"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "My Research Software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2017-12-18
+url: "https://github.com/github-linguist/linguist"
 preferred-citation:
   type: article
   authors:
-  - given-names: Brandt
-    family-names: Gaches
-    orcid:"https://orcid.org/0000-0003-4224-6829"
-  - given-names: Stefano
-    family-names: Bovino
-    orcid: "https://orcid.org/0000-0003-2814-6688"
-  - given-names: Prasanta
-    family-names: Gorai
-    orcid: "https://orcid.org/0000-0003-1602-6849"
-  - given-names: Tommaso
-    family-names: Grassi
-    orcid: "https://orcid.org/0000-0002-3019-1077"
-  - given-names: Marco
-    family-names: Padovani
-    orcid: "https://orcid.org/0000-0003-2303-0096"
-  - given-names: Stefan
-    family-names: Geisse
-    orcid: "https://orcid.org/0000-0002-3102-1774"
-  - given-names: Giulia
-    family-names: Bovolenta
-    orcid: "https://orcid.org/0000-0001-8908-9109"
-  - given-names: Claire
-    family-names: Vallance
-  - given-names: David
-    family-names:  Heathcote
-    orcid: "https://orcid.org/0000-0003-0611-8555"
+  - family-names: "Lisa"
+    given-names: "Mona"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Bot"
+    given-names: "Hew"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
   doi: "10.0000/00000"
-  journal: "Astronomy & Astrophysics"
-  month: 1
+  journal: "Journal Title"
+  month: 9
   start: 1 # First page number
-  end: 1 # Last page number
-  title: "The Astrochemistry Low-energy Electron Cross-Section (ALeCS) database I. Semi-empirical cross-section calculations and ionization rates"
+  end: 10 # Last page number
+  title: "My awesome research software"
   issue: 1
   volume: 1
-  year: 2023
+  year: 2021
