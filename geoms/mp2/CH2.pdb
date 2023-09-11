@@ -1,0 +1,9 @@
+HEADER
+REMARK CH2 opt freq calc
+HETATM    1  C           1      -0.819   0.488  -0.109                       C
+HETATM    2  H           1      -1.802   0.102   0.066                       H
+HETATM    3  H           1       0.159   0.061  -0.028                       H
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

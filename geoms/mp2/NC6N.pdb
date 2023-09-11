@@ -1,0 +1,19 @@
+HEADER
+REMARK NC6N opt freq calc
+HETATM    1  N           1       0.000   0.000   4.449                       N
+HETATM    2  C           1       0.000   0.000   3.269                       C
+HETATM    3  C           1       0.000   0.000   1.906                       C
+HETATM    4  C           1       0.000   0.000   0.675                       C
+HETATM    5  C           1       0.000   0.000  -0.675                       C
+HETATM    6  C           1       0.000   0.000  -1.906                       C
+HETATM    7  C           1       0.000   0.000  -3.269                       C
+HETATM    8  N           1       0.000   0.000  -4.449                       N
+CONECT    1    2
+CONECT    2    1    3
+CONECT    3    2    4
+CONECT    4    3    5
+CONECT    5    4    6
+CONECT    6    5    7
+CONECT    7    6    8
+CONECT    8    7
+END

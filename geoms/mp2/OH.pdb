@@ -1,0 +1,5 @@
+HEADER
+REMARK OH opt freq calc
+HETATM    1  O           1       0.000   0.000   0.000                       O
+HETATM    2  H           1       1.575   0.697   0.000                       H
+END

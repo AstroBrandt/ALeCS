@@ -1,0 +1,9 @@
+HEADER
+REMARK H2S opt freq calc
+HETATM    1  S           1      -0.621   0.530   0.024                       S
+HETATM    2  H           1      -1.581  -0.385   0.141                       H
+HETATM    3  H           1       0.329  -0.403  -0.007                       H
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

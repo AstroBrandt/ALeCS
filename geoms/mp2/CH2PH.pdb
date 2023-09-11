@@ -1,0 +1,13 @@
+HEADER
+REMARK CH2PH opt freq calc
+HETATM    1  C           1      -1.408  -2.300   0.000                       C
+HETATM    2  P           1      -0.374  -0.991   0.000                       P
+HETATM    3  H           1      -0.993  -3.296   0.000                       H
+HETATM    4  H           1      -2.482  -2.231   0.000                       H
+HETATM    5  H           1      -1.370   0.012   0.000                       H
+CONECT    1    2    3    4
+CONECT    2    1    5
+CONECT    3    1
+CONECT    4    1
+CONECT    5    2
+END

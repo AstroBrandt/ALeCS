@@ -1,0 +1,9 @@
+HEADER
+REMARK HCN opt freq calc
+HETATM    1  C           1      -0.868   0.315  -0.052                       C
+HETATM    2  N           1       0.292   0.335  -0.122                       N
+HETATM    3  H           1      -1.925   0.298   0.011                       H
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

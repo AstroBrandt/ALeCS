@@ -1,0 +1,11 @@
+HEADER
+REMARK HOCO opt freq calc
+HETATM    1  H           1      -2.355   0.754   0.148                       H
+HETATM    2  O           1      -1.720   0.029   0.132                       O
+HETATM    3  C           1      -0.501   0.567   0.013                       C
+HETATM    4  O           1       0.531  -0.001  -0.041                       O
+CONECT    1    2
+CONECT    2    1    3
+CONECT    3    2    4
+CONECT    4    3
+END

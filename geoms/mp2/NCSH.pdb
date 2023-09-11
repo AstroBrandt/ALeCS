@@ -1,0 +1,11 @@
+HEADER
+REMARK NCSH opt freq calc
+HETATM    1  N           1      -2.084  -0.265   0.174                       N
+HETATM    2  C           1      -0.917  -0.268   0.084                       C
+HETATM    3  S           1       0.765  -0.383  -0.042                       S
+HETATM    4  H           1       0.943   0.939  -0.116                       H
+CONECT    1    2
+CONECT    2    1    3
+CONECT    3    2    4
+CONECT    4    3
+END

@@ -1,0 +1,15 @@
+HEADER
+REMARK HNCHSH opt freq calc
+HETATM    1  N           1      -0.881  -5.651   0.000                       N
+HETATM    2  C           1      -0.247  -4.551   0.000                       C
+HETATM    3  S           1      -1.142  -3.044   0.000                       S
+HETATM    4  H           1      -0.230  -6.431   0.000                       H
+HETATM    5  H           1       0.832  -4.446   0.000                       H
+HETATM    6  H           1      -0.062  -2.263   0.000                       H
+CONECT    1    2    4
+CONECT    2    1    3    5
+CONECT    3    2    6
+CONECT    4    1
+CONECT    5    2
+CONECT    6    3
+END

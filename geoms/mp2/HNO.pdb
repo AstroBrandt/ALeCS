@@ -1,0 +1,9 @@
+HEADER
+REMARK HNO opt freq calc
+HETATM    1  H           1      -0.986   0.511   0.053                       H
+HETATM    2  N           1      -0.212  -0.193   0.025                       N
+HETATM    3  O           1       0.837   0.412  -0.084                       O
+CONECT    1    2
+CONECT    2    1    3
+CONECT    3    2
+END

@@ -1,0 +1,9 @@
+HEADER
+REMARK CO2 opt freq calc
+HETATM    1  C           1      -0.494   0.417   0.019                       C
+HETATM    2  O           1      -1.656   0.404   0.110                       O
+HETATM    3  O           1       0.668   0.430  -0.072                       O
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

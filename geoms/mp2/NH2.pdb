@@ -1,0 +1,9 @@
+HEADER
+REMARK NH2 opt freq calc
+HETATM    1  N           1      -0.540   0.401   0.024                       N
+HETATM    2  H           1      -1.343  -0.220   0.114                       H
+HETATM    3  H           1       0.252  -0.239  -0.009                       H
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

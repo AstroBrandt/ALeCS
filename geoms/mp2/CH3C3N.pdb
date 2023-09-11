@@ -1,0 +1,19 @@
+HEADER
+REMARK CH3C3N opt freq calc
+HETATM    1  C           1      -4.302   0.614   0.000                       C
+HETATM    2  C           1      -2.858   0.581  -0.000                       C
+HETATM    3  H           1      -4.661   1.455  -0.588                       H
+HETATM    4  H           1      -4.678   0.716   1.014                       H
+HETATM    5  H           1      -4.701  -0.302  -0.426                       H
+HETATM    6  C           1      -1.643   0.553  -0.000                       C
+HETATM    7  C           1      -0.281   0.522  -0.000                       C
+HETATM    8  N           1       0.891   0.496   0.000                       N
+CONECT    1    2    3    4    5
+CONECT    2    1    6
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+CONECT    6    2    7
+CONECT    7    6    8
+CONECT    8    7
+END

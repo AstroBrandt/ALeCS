@@ -1,0 +1,7 @@
+HEADER
+REMARK CH opt freq calc
+HETATM    1  C           1       0.000   0.000   0.000                       C
+HETATM    2  H           1       1.503   0.648   0.000                       H
+CONECT    1    2
+CONECT    2    1
+END

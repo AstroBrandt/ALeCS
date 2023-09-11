@@ -1,0 +1,11 @@
+HEADER
+REMARK SO3 opt freq calc
+HETATM    1  S           1      -0.794   0.139   0.055                       S
+HETATM    2  O           1      -0.756   1.577  -0.014                       O
+HETATM    3  O           1      -2.056  -0.544   0.185                       O
+HETATM    4  O           1       0.431  -0.618  -0.005                       O
+CONECT    1    2    3    4
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+END

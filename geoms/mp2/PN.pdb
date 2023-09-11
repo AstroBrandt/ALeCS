@@ -1,0 +1,7 @@
+HEADER
+REMARK PN opt freq calc
+HETATM    1  P           1       0.000   0.000   0.000                       P
+HETATM    2  N           1       1.583   0.304   0.000                       N
+CONECT    1    2
+CONECT    2    1
+END

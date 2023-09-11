@@ -1,0 +1,13 @@
+HEADER
+REMARK CH4 opt freq calc
+HETATM    1  C           1      -0.457   0.546   0.000                       C
+HETATM    2  H           1       0.627   0.546   0.000                       H
+HETATM    3  H           1      -0.819  -0.258  -0.631                       H
+HETATM    4  H           1      -0.819   1.494  -0.381                       H
+HETATM    5  H           1      -0.819   0.401   1.012                       H
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+END

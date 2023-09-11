@@ -1,0 +1,7 @@
+HEADER
+REMARK NS opt freq calc
+HETATM    1  N           1       0.000   0.000   0.000                       N
+HETATM    2  S           1       1.536   0.196   0.000                       S
+CONECT    1    2
+CONECT    2    1
+END

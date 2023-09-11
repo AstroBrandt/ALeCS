@@ -1,0 +1,31 @@
+HEADER
+REMARK C4H10 opt freq calc
+HETATM    1  C           1      -2.417  -0.028  -0.092                       C
+HETATM    2  C           1      -1.247   0.917  -0.290                       C
+HETATM    3  H           1      -3.368   0.467  -0.272                       H
+HETATM    4  H           1      -2.429  -0.418   0.924                       H
+HETATM    5  H           1      -2.345  -0.876  -0.771                       H
+HETATM    6  C           1       0.092   0.249  -0.044                       C
+HETATM    7  H           1      -1.346   1.773   0.380                       H
+HETATM    8  H           1      -1.263   1.317  -1.305                       H
+HETATM    9  C           1       1.262   1.194  -0.242                       C
+HETATM   10  H           1       0.191  -0.606  -0.714                       H
+HETATM   11  H           1       0.108  -0.151   0.971                       H
+HETATM   12  H           1       1.274   1.584  -1.258                       H
+HETATM   13  H           1       2.213   0.700  -0.062                       H
+HETATM   14  H           1       1.190   2.042   0.437                       H
+CONECT    1    2    3    4    5
+CONECT    2    1    6    7    8
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+CONECT    6    2    9   10   11
+CONECT    7    2
+CONECT    8    2
+CONECT    9    6   12   13   14
+CONECT   10    6
+CONECT   11    6
+CONECT   12    9
+CONECT   13    9
+CONECT   14    9
+END

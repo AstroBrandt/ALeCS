@@ -1,0 +1,15 @@
+HEADER
+REMARK CH2NH2 opt freq cac
+HETATM    1  C           1       0.000  -0.009  -0.712                       C
+HETATM    2  N           1       0.000  -0.101   0.671                       N
+HETATM    3  H           1      -0.924   0.278  -1.176                       H
+HETATM    4  H           1       0.924   0.278  -1.176                       H
+HETATM    5  H           1      -0.831  -0.493   1.077                       H
+HETATM    6  H           1       0.831  -0.493   1.077                       H
+CONECT    1    2    3    4
+CONECT    2    1    5    6
+CONECT    3    1
+CONECT    4    1
+CONECT    5    2
+CONECT    6    2
+END

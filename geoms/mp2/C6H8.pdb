@@ -1,0 +1,31 @@
+HEADER
+REMARK C6H8 opt freq calc
+HETATM    1  C           1      -5.121  -0.008  -0.212                       C
+HETATM    2  C           1      -4.118   1.006   0.325                       C
+HETATM    3  H           1      -5.147  -0.894   0.419                       H
+HETATM    4  H           1      -4.847  -0.320  -1.217                       H
+HETATM    5  H           1      -6.122   0.414  -0.243                       H
+HETATM    6  C           1      -2.751   0.433   0.420                       C
+HETATM    7  H           1      -4.440   1.333   1.316                       H
+HETATM    8  H           1      -4.098   1.888  -0.313                       H
+HETATM    9  C           1      -1.688   0.904  -0.242                       C
+HETATM   10  C           1      -0.395   0.338  -0.152                       C
+HETATM   11  C           1       0.726  -0.126  -0.089                       C
+HETATM   12  H           1      -2.618  -0.431   1.060                       H
+HETATM   13  H           1      -1.807   1.765  -0.885                       H
+HETATM   14  H           1       1.695  -0.550  -0.048                       H
+CONECT    1    2    3    4    5
+CONECT    2    1    6    7    8
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+CONECT    6    2    9   12
+CONECT    7    2
+CONECT    8    2
+CONECT    9    6   10   13
+CONECT   10    9   11
+CONECT   11   10   14
+CONECT   12    6
+CONECT   13    9
+CONECT   14   11
+END

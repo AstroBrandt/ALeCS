@@ -1,0 +1,7 @@
+HEADER
+REMARK CP opt freq calc
+HETATM    1  C           1       0.000   0.000   0.000                       C
+HETATM    2  P           1       1.937   0.284  -0.053                       P
+CONECT    1    2
+CONECT    2    1
+END

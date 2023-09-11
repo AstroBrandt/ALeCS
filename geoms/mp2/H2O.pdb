@@ -1,0 +1,9 @@
+HEADER
+REMARK H2O opt freq calc
+HETATM    1  O           1      -0.619   0.447   0.028                       O
+HETATM    2  H           1      -1.368  -0.145   0.113                       H
+HETATM    3  H           1       0.140  -0.139  -0.004                       H
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

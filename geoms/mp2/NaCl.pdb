@@ -1,0 +1,7 @@
+HEADER
+REMARK NaCl opt freq calc
+HETATM    1 Cl           1       0.000   0.000   0.000                      Cl
+HETATM    2 Na           1       2.784   0.319   0.000                      Na
+CONECT    1    2
+CONECT    2    1
+END

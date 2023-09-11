@@ -1,0 +1,13 @@
+HEADER
+REMARK N2H3 opt freq calc
+HETATM    1  N           1      -1.212  -1.187   0.000                       N
+HETATM    2  N           1      -1.306   0.137   0.000                       N
+HETATM    3  H           1      -0.345  -1.691   0.000                       H
+HETATM    4  H           1      -2.069  -1.700   0.000                       H
+HETATM    5  H           1      -0.354   0.487   0.000                       H
+CONECT    1    2    3    4
+CONECT    2    1    5
+CONECT    3    1
+CONECT    4    1
+CONECT    5    2
+END

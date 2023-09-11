@@ -1,0 +1,11 @@
+HEADER
+REMARK C2N2 opt freq calc
+HETATM    1  N           1      -1.528   0.175   0.111                       N
+HETATM    2  C           1      -0.362   0.199   0.019                       C
+HETATM    3  C           1       1.003   0.227  -0.088                       C
+HETATM    4  N           1       2.170   0.251  -0.180                       N
+CONECT    1    2
+CONECT    2    1    3
+CONECT    3    2    4
+CONECT    4    3
+END

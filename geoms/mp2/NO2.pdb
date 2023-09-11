@@ -1,0 +1,9 @@
+HEADER
+REMARK NO2 opt freq calc
+HETATM    1  N           1      -0.472  -0.056   0.039                       N
+HETATM    2  O           1      -1.665  -0.071   0.133                       O
+HETATM    3  O           1       0.721  -0.040  -0.054                       O
+CONECT    1    2    3
+CONECT    2    1
+CONECT    3    1
+END

@@ -1,0 +1,7 @@
+HEADER
+REMARK PH opt freq calc
+HETATM    1  P           1       0.000   0.000   0.000                       P
+HETATM    2  H           1       1.740   0.022   0.000                       H
+CONECT    1    2
+CONECT    2    1
+END

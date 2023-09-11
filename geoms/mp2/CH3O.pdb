@@ -1,0 +1,13 @@
+HEADER
+REMARK CH3O opt freq calc
+HETATM    1  C           1      -0.956  -1.895  -0.000                       C
+HETATM    2  O           1      -0.880  -0.524   0.000                       O
+HETATM    3  H           1      -0.389  -2.266   0.857                       H
+HETATM    4  H           1      -0.434  -2.267  -0.885                       H
+HETATM    5  H           1      -1.975  -2.275   0.028                       H
+CONECT    1    2    3    4    5
+CONECT    2    1
+CONECT    3    1
+CONECT    4    1
+CONECT    5    1
+END

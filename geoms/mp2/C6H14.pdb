@@ -1,0 +1,43 @@
+HEADER
+REMARK C6H14 opt freq calc
+HETATM    1  C           1       0.009   0.758   0.007                       C
+HETATM    2  C           1      -0.009  -0.758   0.007                       C
+HETATM    3  C           1       1.409   1.340   0.007                       C
+HETATM    4  C           1      -1.409  -1.340   0.007                       C
+HETATM    5  C           1       1.409   2.857   0.007                       C
+HETATM    6  C           1      -1.409  -2.857   0.007                       C
+HETATM    7  H           1      -0.533   1.125   0.883                       H
+HETATM    8  H           1      -0.533   1.125  -0.868                       H
+HETATM    9  H           1       0.533  -1.125  -0.868                       H
+HETATM   10  H           1       0.533  -1.125   0.883                       H
+HETATM   11  H           1       1.948   0.971   0.881                       H
+HETATM   12  H           1       1.947   0.971  -0.867                       H
+HETATM   13  H           1      -1.948  -0.971   0.881                       H
+HETATM   14  H           1      -1.947  -0.971  -0.867                       H
+HETATM   15  H           1       2.420   3.259   0.006                       H
+HETATM   16  H           1       0.894   3.241  -0.872                       H
+HETATM   17  H           1       0.895   3.242   0.886                       H
+HETATM   18  H           1      -2.420  -3.259   0.006                       H
+HETATM   19  H           1      -0.894  -3.241  -0.872                       H
+HETATM   20  H           1      -0.895  -3.242   0.886                       H
+CONECT    1    2    3    7    8
+CONECT    2    1    4    9   10
+CONECT    3    1    5   11   12
+CONECT    4    2    6   13   14
+CONECT    5    3   15   16   17
+CONECT    6    4   18   19   20
+CONECT    7    1
+CONECT    8    1
+CONECT    9    2
+CONECT   10    2
+CONECT   11    3
+CONECT   12    3
+CONECT   13    4
+CONECT   14    4
+CONECT   15    5
+CONECT   16    5
+CONECT   17    5
+CONECT   18    6
+CONECT   19    6
+CONECT   20    6
+END

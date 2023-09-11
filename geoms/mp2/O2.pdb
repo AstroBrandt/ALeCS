@@ -1,0 +1,7 @@
+HEADER
+REMARK O2 opt freq calc
+HETATM    1  O           1       0.000   0.000   0.000                       O
+HETATM    2  O           1       1.305   0.235   0.016                       O
+CONECT    1    2
+CONECT    2    1
+END
