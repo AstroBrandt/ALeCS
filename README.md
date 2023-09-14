@@ -5,6 +5,7 @@
       <img alt="Database logo" src="">
   </picture>
 </p>
+![DOI](https://img.shields.io/badge/doi-10.00000/5c6e1160b8d8a-blue)
 
 This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C**ross **S**ection ([ALeCS](alecs.brandt-gaches.space)) database, the result of an international collaboration between astronomers and chemists. The database includes electron-impact cross section data for a wide range of molecules of astrochemical interest, ranging from simple diatomics such as carbon monoxide (CO) to complex organics (CH3OH, methanol) to prebiotics (NH2CHO, formamide).
 
