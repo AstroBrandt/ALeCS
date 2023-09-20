@@ -37,7 +37,7 @@ The database folders are described as follows:
 ## Collaboration
 Our current collaboration is
 - Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
-- Stefano Bovino, Assistant Professor, Italy
+- Stefano Bovino, Associate Professor, Italy
 - Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
 - Marco Mardovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
