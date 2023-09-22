@@ -10,7 +10,7 @@ This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C*
 
 ![doi](https://img.shields.io/badge/doi-10.0000-blue?logo=DOI&logoColor=white)
 
-![version](https://img.shields.io/badge/version-0.1?color=orange)
+![version](https://img.shields.io/badge/version-0.1-orange)
 
 [alecs.brandt-gaches.space]: https://alecs.brandt-gaches.space
 
