@@ -44,7 +44,7 @@ Our current collaboration is
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
 - Marco Mardovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
 - Stefan Geisse, Professor, Universidad de Concepción, Chile
-- Guilia Bovolenta, PhD Student, Universidad de Concepción, Chile
+- Giulia Bovolenta, PhD Student, Universidad de Concepción, Chile
 - Claire Vallance, Professor, University of Oxford, United Kingdom
 - David Heathcote, Postdoctoral Researcher, University of Oxford, United Kingdom
 
