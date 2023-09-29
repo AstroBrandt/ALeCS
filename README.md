@@ -5,10 +5,12 @@
       <img alt="Database logo" src="">
   </picture>
 </p>
-[![Static Badge](https://img.shields.io/badge/doi-10.0000-blue?logo=DOI&logoColor=white)]()
-
 
 This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C**ross **S**ection ([ALeCS](alecs.brandt-gaches.space)) database, the result of an international collaboration between astronomers and chemists. The database includes electron-impact cross section data for a wide range of molecules of astrochemical interest, ranging from simple diatomics such as carbon monoxide (CO) to complex organics (CH3OH, methanol) to prebiotics (NH2CHO, formamide).
+
+![doi](https://img.shields.io/badge/doi-10.0000-blue?logo=DOI&logoColor=white)
+
+![version](https://img.shields.io/badge/version-0.1-orange)
 
 [alecs.brandt-gaches.space]: https://alecs.brandt-gaches.space
 
@@ -37,12 +39,12 @@ The database folders are described as follows:
 ## Collaboration
 Our current collaboration is
 - Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
-- Stefano Bovino, Assistant Professor, Italy
+- Stefano Bovino, Associate Professor, Italy
 - Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
 - Marco Mardovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
 - Stefan Geisse, Professor, Universidad de Concepción, Chile
-- Guilia Bovolenta, PhD Student, Universidad de Concepción, Chile
+- Giulia Bovolenta, PhD Student, Universidad de Concepción, Chile
 - Claire Vallance, Professor, University of Oxford, United Kingdom
 - David Heathcote, Postdoctoral Researcher, University of Oxford, United Kingdom
 
