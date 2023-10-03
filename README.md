@@ -15,7 +15,7 @@ This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C*
 [alecs.brandt-gaches.space]: https://alecs.brandt-gaches.space
 
 ## Initial Release
-The initial release of the database, described in [Gaches et al. (2023c)](), includes total electron-impact ionization cross sections for over 150 neutral molecules spanning electron energies from 10 eV to 10 keV. The cross sections were calculated following the [Binary-encounter Bethe](https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K/abstract) (BEB) formalism using optimize molecule geometries and electronic structures computed using the [Gaussian16](https://www.gaussian.com/) and [MolPro](https://www.molpro.net/) codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.
+The initial release of the database, described in [Gaches et al. (2023c)](), includes total electron-impact ionization cross sections for over 200 neutral molecules spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the [Binary-encounter Bethe](https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K/abstract) (BEB) formalism using optimize molecule geometries and electronic structures computed using the [Gaussian16](https://www.gaussian.com/) and [MolPro](https://www.molpro.net/) codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.
 
 > [!NOTE]
 > Evaluations of ionization potentials can vary drastically between each other, and for many molecules experimental values vary as well. We suggest those interested in the ionization potentials to also consult the [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/ie-ser/).
@@ -29,7 +29,7 @@ Finally, we include chemical networks for the ionization chemistry in both the [
 
 ## Database Format
 The database folders are described as follows:
-- `NIST_orbitals/`: This folder stores the molecule orbitals in the same format as the NIST database. It has all the information needed to compute the BEB cross sections, with example Fortran and Python scripts in the folder, BEB.F90 and BEB.py, respectively.
+- `NIST_orbitals/`: This folder stores the molecule orbitals in the same format as the NIST database. It has all the information needed to compute the BEB cross sections.
 - `full_orbitals/`: Here we store the full information for the molecular orbital calculation. This includes the different orbital energy level calculations from the optimization and subsequent population analysis and from electron propagator theory (EPT). This data is presented for transparency, and we recommend using the NIST_orbital format for calculations.
 - `geoms/`: This folder stores [pdb format](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)) files with the optimized geometries at the HF, MP2 and CCSD(T) levels of theory.
 - `ion_xs/`: This folder contains the total electron-impact ionization cross sections at HF, MP2 and CCSD(T) levels of theory. The folders contain different subsets of the molecules, with some overlap between them.
