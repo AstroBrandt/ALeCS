@@ -24,6 +24,8 @@ In the database we also include the optimized geometries and computed electron o
 
 > [!NOTE]
 > Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues.
+> The BEB cross section can be computed directly from the orbitals using the following formula, there  $`t_i =  E_e/B_i`$, $`u_i = U_i/B_i`$, $`S_i = 4\pi a_0^2 N_i \left ( \frac{R_{\infty}}{B_i}\right )^2`$, and $`B_i`$ and $`U_i`$ are the electron binding energy and average kinetic energy, $`N_i`$ is the number of electrons of orbital $i$ and $`R_{\infty}`$ is the Rydberg constant:
+> $$\sigma_{\rm BEB} = \sum_{{\rm orbitals}, i}  \left [ \frac{S_i}{t_i + (u_i + 1)}\right ] \Biggl [ \frac{\ln t_i}{2} \left ( 1 - \frac{1}{t_i^2} \right ) + \left ( 1 - \frac{1}{t_i} - \frac{\ln t_i}{t_i + 1}\right ) \Biggr ]$$
 
 Finally, we include chemical networks for the ionization chemistry in both the [UMIST](http://udfa.ajmarkwick.net/index.php) and [KIDA](https://kida.astrochem-tools.org/) formats. For each format, there are two possible networks, one using a Voyager-like spectrum (**L**) and one using a "High" proton spectrum to reproduce diffuse gas measurements (**H**).
 
