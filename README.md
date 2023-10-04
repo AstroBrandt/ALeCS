@@ -30,10 +30,14 @@ Finally, we include chemical networks for the ionization chemistry in both the [
 ## Database Format
 The database folders are described as follows:
 - `NIST_orbitals/`: This folder stores the molecule orbitals in the same format as the NIST database. It has all the information needed to compute the BEB cross sections.
+  * This file is formatted with columns as follows: `Orbital B(eV) U(eV) N Q`, where `Orbital` is the orbital number, `B(eV)` is the electron binding energy in eV, `U(eV)` is the average kinetic energy of the electron, `N` is the number of electrons in the orbital and `Q` is the dipole constant, but in this data is kept to be 1. This is done to be consistent with the format of the NIST database.
 - `full_orbitals/`: Here we store the full information for the molecular orbital calculation. This includes the different orbital energy level calculations from the optimization and subsequent population analysis and from electron propagator theory (EPT). This data is presented for transparency, and we recommend using the NIST_orbital format for calculations.
 - `geoms/`: This folder stores [pdb format](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)) files with the optimized geometries at the HF, MP2 and CCSD(T) levels of theory.
+  * The MP2 and CCSD(T) geometries are saved as PDB files. The HF geometries are saved as XYZ files. These were checked and readable by GaussView and Avogadro (versions 1 and 2).
 - `ion_xs/`: This folder contains the total electron-impact ionization cross sections at HF, MP2 and CCSD(T) levels of theory. The folders contain different subsets of the molecules, with some overlap between them.
+  1. These files have two or three columns. The first column is always the energy in eV. The second column is the BEB cross section in units of $a_0^2$ where $a_0$ is the Bohr radius. The third column, if it is there, is the damped BEB cross section in units of $a_0^2$.
 - `ips/`: There are several text files here containing the calculated ionization potentials at CAM-B3LYP/aug-cc-pVQZ and CCSD(T)/CBS levels of theory and the recommended values from the NIST Chemistry WebBook.
+  * There is a file for each subset, with the first column being the chemical name and the second the ionization potential in eV.
 
 
 ## Collaboration
