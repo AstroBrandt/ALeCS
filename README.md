@@ -25,7 +25,7 @@ In the database we also include the optimized geometries and computed electron o
 > [!NOTE]
 > Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues.
 
-Finally, we include chemical networks for the ionization chemistry in both the [UMIST](http://udfa.ajmarkwick.net/index.php) and [KIDA](https://kida.astrochem-tools.org/) formats. For each format, there are two possible networks, one using a Voyager-like spectrum (**L**) and one using a "High" proton spectrum to reproduce diffuse gas measurements (**H**).
+Finally, we include chemical networks for the ionization chemistry in both the [UMIST](http://udfa.ajmarkwick.net/index.php) and [KIDA](https://kida.astrochem-tools.org/) formats.
 
 ## Database Format
 The database folders are described as follows:
