@@ -35,7 +35,8 @@ The database folders are described as follows:
 - `geoms/`: This folder stores [pdb format](https://en.wikipedia.org/wiki/Protein_Data_Bank_(file_format)) files with the optimized geometries at the HF, MP2 and CCSD(T) levels of theory.
   * The MP2 and CCSD(T) geometries are saved as PDB files. The HF geometries are saved as XYZ files. These were checked and readable by GaussView and Avogadro (versions 1 and 2).
 - `ion_xs/`: This folder contains the total electron-impact ionization cross sections at HF, MP2 and CCSD(T) levels of theory. The folders contain different subsets of the molecules, with some overlap between them.
-  1. These files have two or three columns. The first column is always the energy in eV. The second column is the BEB cross section in units of $a_0^2$ where $a_0$ is the Bohr radius. The third column, if it is there, is the damped BEB cross section in units of $a_0^2$.
+  * These files have two or three columns. The first column is always the energy in eV. The second column is the BEB cross section in units of $a_0^2$ where $a_0$ is the Bohr radius. The third column, if it is there, is the damped BEB cross section in units of $a_0^2$.
+  * In the `recommended/` folder there is the full sample of cross sections where for each species we give the recommended cross sections. These files are all two column containing **only** the BEB cross sections.
 - `ips/`: There are several text files here containing the calculated ionization potentials at CAM-B3LYP/aug-cc-pVQZ and CCSD(T)/CBS levels of theory and the recommended values from the NIST Chemistry WebBook.
   * There is a file for each subset, with the first column being the chemical name and the second the ionization potential in eV.
 
@@ -44,7 +45,7 @@ The database folders are described as follows:
 Our current collaboration is
 - Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Stefano Bovino, Associate Professor, Sapienza University of Rome, Italy
-- Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology, Sweden
+- Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology & Gothenburg University, Sweden
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
 - Marco Mardovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
 - Stefan Geisse, Professor, Universidad de Concepción, Chile
