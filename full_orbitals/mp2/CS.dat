@@ -1,5 +1,5 @@
 #Alpha orbitals
-# Orb.	          KE	      BE-SCF	      BE-P3+	    Pole
+# Orb.	          KE	       BE-HF	      BE-P3+	    Pole
     1	  3297.41777	  2503.50702	         ***	     ***
     2	   436.51521	   309.05811	         ***	     ***
     3	   509.01110	   245.14232	         ***	     ***
