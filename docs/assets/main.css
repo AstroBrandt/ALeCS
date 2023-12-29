@@ -1,0 +1,246 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #f5fcfc;
+}
+
+#home{
+    background-color: #f2ffff; 
+    height:75%;
+    opacity:0.95;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10.8px);
+    width:auto;
+}
+#home h2 {
+    color:#004646;
+}
+#home p {
+    color:#001414;
+}
+#home img {
+    height:auto;
+}
+
+.glass {
+    background-color:rgba(245, 252, 252, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10.8px);
+}
+
+a {
+    color: #1E1E1D
+}
+
+p {
+    color: #1E1E1D
+}
+
+.align-items-center {
+    display: flex; 
+    align-items: center;  /*Aligns vertically center */
+  }
+
+label {
+    width:60px;
+    height:30px;
+    position:relative;
+    top:0.25em;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: 0.5s;
+}
+label:after {
+    content: "";
+    width:20px;
+    height: 20px;
+    position: absolute;
+    top:20%;
+    left:10%;
+    background: linear-gradient(180deg,#ffcc89,#d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  }
+input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + label {
+    background: #1E1E1D
+}
+input:checked + label:after {
+    left:90%;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg,#777,#3a3a3a);
+}
+label, label:after {
+  transition: 0.5s
+}
+
+label:active:after {
+    width:30px;
+}
+label svg {
+    position:absolute;
+    width:32%;
+    top:23.5%;
+    z-index:100;
+}
+label svg.sun {
+    left:11%;
+    fill:#fff;
+    stroke:#fff;
+    stroke-width: 2;
+    transition: 0.3s;
+    display: inline;
+}
+label svg.moon {
+    left:58.25%;
+    transition: 0.3s;
+    fill:#000;
+    stroke:#000;
+    stroke-width: 2;
+    display:none;
+}
+input:checked + label svg.sun {
+    display: none;
+    fill:#000000;
+    stroke:#000;
+    stroke-width: 2;
+}
+input:checked + label svg.moon {
+    display:inline;
+    fill:#fff;
+    stroke:#fff;
+    stroke-width: 2;
+}
+
+.bg {
+    /*background: radial-gradient(circle 35em, #4A4453, #675686, #F9EBFF);*/
+    background: linear-gradient(-60deg, #F3ECFF 50%, #1f45c0 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+
+
+.rbg {
+    background: linear-gradient(60deg, #ffffff 50%, rgb(45, 45, 45)  50%);
+    bottom:0;
+    left:-50%;
+    opacity:.1;
+    position:fixed;
+    right:-40%;
+    top:0;
+    z-index:-1;
+  }
+  
+
+.waters li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-image: url("water_sticks.svg");
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.waters li:nth-child(1){
+    left: 25%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+}
+
+
+.waters li:nth-child(2){
+    left: 10%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.waters li:nth-child(3){
+    left: 70%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 4s;
+}
+
+.waters li:nth-child(4){
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.waters li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.waters li:nth-child(6){
+    left: 75%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 3s;
+}
+
+.waters li:nth-child(7){
+    left: 35%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 7s;
+}
+
+.waters li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.waters li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.waters li:nth-child(10){
+    left: 85%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
