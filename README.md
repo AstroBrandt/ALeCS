@@ -91,7 +91,7 @@ If you use the Hartree-Fock computed data from [Heathcote & Valance (2018)](http
     pages = {195203},
     author = {David Heathcote and Claire Vallance},
     title = {Total electron ionization cross-sections for neutral molecules relevant to astrochemistry},
-    journal = {Journal of Physics B: Atomic, Molecular and Optical Physics}}
+    journal = {Journal of Physics B: Atomic, Molecular and Optical Physics}
 }
 ```
 ```
