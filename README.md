@@ -6,19 +6,16 @@
   </picture>
 </p>
 
-This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C**ross **S**ection ([ALeCS](alecs.brandt-gaches.space)) database, the result of an international collaboration between astronomers and chemists. The database includes electron-impact cross section data for a wide range of molecules of astrochemical interest, ranging from simple diatomics such as carbon monoxide (CO) to complex organics (CH3OH, methanol) to prebiotics (NH2CHO, formamide).
-
-> [!WARNING]
-> This is currently the pre-release version of the database, version 0.1. Therefore, the data contained within and structure may change during the paper review process and from community feedback.
+This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C**ross **S**ection ([ALeCS](astrobrandt.github.io/ALeCS/)) database, the result of an international collaboration between astronomers and chemists. The database includes electron-impact cross section data for a wide range of molecules of astrochemical interest, ranging from simple diatomics such as carbon monoxide (CO) to complex organics (CH3OH, methanol) to prebiotics (NH2CHO, formamide).
 
 [![doi](https://img.shields.io/badge/doi-10.48550/arXiv.2310.10739-blue?logo=DOI&logoColor=white)](https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract)
 
-![version](https://img.shields.io/badge/version-0.1-orange)
+![version](https://img.shields.io/badge/version-2024.02-orange)
 
-[alecs.brandt-gaches.space]: https://alecs.brandt-gaches.space
+[astrobrandt.github.io/ALeCS/]: astrobrandt.github.io/ALeCS/
 
 ## Initial Release
-The initial release of the database, described in [Gaches et al. (2023b)](https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract), includes total electron-impact ionization cross sections for over 200 neutral molecules spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the [Binary-encounter Bethe](https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K/abstract) (BEB) formalism using optimize molecule geometries and electronic structures computed using the [Gaussian16](https://www.gaussian.com/) and [MolPro](https://www.molpro.net/) codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.
+The initial release of the database, described in [Gaches et al. (2024)](https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract), includes total electron-impact ionization cross sections for over 200 neutral molecules and a few ions spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the [Binary-encounter Bethe](https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K/abstract) (BEB) formalism using optimize molecule geometries and electronic structures computed using the [Gaussian16](https://www.gaussian.com/) and [MolPro](https://www.molpro.net/) codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.
 
 > [!NOTE]
 > Evaluations of ionization potentials can vary drastically between each other, and for many molecules experimental values vary as well. We suggest those interested in the ionization potentials to also consult the [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/ie-ser/).
@@ -26,7 +23,7 @@ The initial release of the database, described in [Gaches et al. (2023b)](https:
 In the database we also include the optimized geometries and computed electron orbitals. The orbitals can be used to recompute the BEB cross sections in applications as desired, with the format in `NIST_orbitals/` matching that in the [NIST database](https://physics.nist.gov/PhysRefData/Ionization/molTable.html).
 
 > [!NOTE]
-> Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues.
+> Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues. We have added a notebook in the `scripts/` folder to demonstrate this.
 
 Finally, we include chemical networks for the ionization chemistry in both the [UMIST](http://udfa.ajmarkwick.net/index.php) and [KIDA](https://kida.astrochem-tools.org/) formats.
 
@@ -48,20 +45,20 @@ The database folders are described as follows:
 Our current collaboration is
 - Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Stefano Bovino, Associate Professor, Sapienza University of Rome, Italy
+- Giulia Bovolenta, PhD Student, Universidad de Concepción, Chile
 - Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology & Gothenburg University, Sweden
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
-- Marco Padovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
-- Stefan  Vogt-Geisse, Professor, Universidad de Concepción, Chile
-- Giulia Bovolenta, PhD Student, Universidad de Concepción, Chile
-- Claire Vallance, Professor, University of Oxford, United Kingdom
 - David Heathcote, Postdoctoral Researcher, University of Oxford, United Kingdom
+- Marco Padovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
+- Claire Vallance, Professor, University of Oxford, United Kingdom
+- Stefan Vogt-Geisse, Professor, Universidad de Concepción, Chile
 
 The ALeCS database is an ongoing live project and open to community involvement. If you wish to get involved in this work, please feel free to send the PI an email. We have a broad interst in expanding the database to include a wide range of physical and energetic chemical processes relevant for astrochemical modeling.
 
 ## Citing the database
 We strongly believe that astrophysical and astrochemical modeling should cite the intrinsic data that goes into the chemical networks and model. If you use the data within this database, we request that you cite the database as
 ```
-@ARTICLE{Gaches2023,
+@ARTICLE{Gaches2024,
        author = {{Gaches}, Brandt A.~L. and {Grassi}, Tommaso and {Vogt-Geisse}, Stefan and {Bovolenta}, Giulia M. and {Vallance}, Claire and {Heathcote}, David and {Padovani}, Marco and {Bovino}, Stefano and {Gorai}, Prasanta},
         title = "{The Astrochemistry Low-energy Electron Cross-Section (ALeCS) database I. Semi-empirical electron-impact ionization cross-section calculations and ionization rates}",
       journal = {arXiv e-prints},
