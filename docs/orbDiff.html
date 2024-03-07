@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Astrochemistry Low-energy electron Cross-Section Database - The Astrochemistry Low-energy electron Cross-Section Database</title>
+<title>Astrochemistry Low-energy electron Cross-Section Database - Differences between orbital levels with method</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -67,6 +101,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -80,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./index.html">The Astrochemistry Low-energy electron Cross-Section Database</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./BEBscript.html">Example plots using data</a></li><li class="breadcrumb-item"><a href="./orbDiff.html">Molecular orbital energy comparisons</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -133,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Astrochemistry Low-energy electron Cross-Section Database</span></a>
   </div>
 </li>
@@ -220,7 +283,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./orbDiff.html" class="sidebar-item-text sidebar-link">
+  <a href="./orbDiff.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Molecular orbital energy comparisons</span></a>
   </div>
 </li>
@@ -232,25 +295,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#initial-release" id="toc-initial-release" class="nav-link" data-scroll-target="#initial-release">Initial Release</a></li>
-  <li><a href="#citing-the-database" id="toc-citing-the-database" class="nav-link" data-scroll-target="#citing-the-database">Citing the database</a></li>
-  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./index.html">The Astrochemistry Low-energy electron Cross-Section Database</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./BEBscript.html">Example plots using data</a></li><li class="breadcrumb-item"><a href="./orbDiff.html">Molecular orbital energy comparisons</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Astrochemistry Low-energy electron Cross-Section Database</h1>
+<h1 class="title">Differences between orbital levels with method</h1>
 </div>
 
 
@@ -267,81 +319,73 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
+<p>This is a short bit of code to visualize the difference between in the orbital level calculations between the different methods.</p>
+<div id="1d70db9c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>First, point to the database is to define the path as a variable, in this case we define the variable</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>alecs_db <span class="op">=</span> <span class="st">"/path/to/base/ALeCS/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then, read in the different orbital files for the MP2, HF and CCSD(T), in this case using CO<sub>2</sub>.</p>
+<div id="fcce3025" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hf_data <span class="op">=</span> np.loadtxt(alecs_db<span class="op">+</span><span class="st">"NIST_orbitals/hf/CO2.norb"</span>, usecols<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>], comments<span class="op">=</span><span class="st">"#"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mp2_data <span class="op">=</span> np.loadtxt(alecs_db<span class="op">+</span><span class="st">"NIST_orbitals/mp2/CO2.norb"</span>, usecols<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>], comments<span class="op">=</span><span class="st">"#"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ccsdt_data <span class="op">=</span> np.loadtxt(alecs_db<span class="op">+</span><span class="st">"NIST_orbitals/ccsdt/co2.norb"</span>, usecols<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>], comments<span class="op">=</span><span class="st">"#"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We will plot these next to each other then to compare how similar/different they are. We will focus on orbitals with binding energies <span class="math inline">\(\leq\)</span> 100 eV since these dominate the cross section. First, the binding energy</p>
+<div id="ded3ece3" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">8</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b <span class="kw">in</span> hf_data[:,<span class="dv">0</span>]:</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">0.75</span>, <span class="fl">1.25</span>], [b,b], <span class="st">'b-'</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b <span class="kw">in</span> mp2_data[:,<span class="dv">0</span>]:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">1.75</span>, <span class="fl">2.25</span>], [b,b], <span class="st">'r-'</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> b <span class="kw">in</span> ccsdt_data[:,<span class="dv">0</span>]:</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">2.75</span>, <span class="fl">3.25</span>], [b,b], <span class="st">'k-'</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="fl">0.5</span>, <span class="fl">3.5</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">0</span>,<span class="dv">45</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>ax.set_xticks([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="st">"HF"</span>, <span class="st">"MP2"</span>, <span class="st">"CCSD(T)"</span>])</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'both'</span>, axis<span class="op">=</span><span class="st">'both'</span>, labelsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Method"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Binding Energy (eV)"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="images/alecs_logo.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+<p><img src="orbDiff_files/figure-html/cell-5-output-1.png" width="376" height="672" class="figure-img"></p>
 </figure>
 </div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The <strong>A</strong>strochemistry <strong>L</strong>ow-energy <strong>e</strong>lectron <strong>C</strong>ross-<strong>S</strong>ection Database (<a href="astrobrandt.github.io/ALeCS/">ALeCS</a>) is a new database for useful electron-impact cross sections, ionization and excitation rates, optimized geometries, etc. The collaboration is an interdisciplinary group of astronomers and chemists. The database is currently on v2024.02. If there is a particular molecule of interest in which data is missing, or if you are interested in joining the collaboration, please feel free to reach out or open a GitHub Discussions. Much of the explainations within these docs are from the <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract">database release paper</a>.</p>
-<section id="initial-release" class="level2">
-<h2 class="anchored" data-anchor-id="initial-release">Initial Release</h2>
-<p>The initial release of the database, described in <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract">Gaches et al.&nbsp;(2024)</a>, includes total electron-impact ionization cross sections for over 200 neutral molecules and a few ions spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the <a href="./geom.html">Binary-encounter Bethe</a> (BEB) formalism using optimize molecule geometries and electronic structures computed using the <a href="https://www.gaussian.com/">Gaussian16</a> and <a href="https://www.molpro.net/">MolPro</a> codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.</p>
-<blockquote class="blockquote">
-<p>Evaluations of ionization potentials can vary drastically between each other, and for many molecules experimental values vary as well. We suggest those interested in the ionization potentials to also consult the <a href="https://webbook.nist.gov/chemistry/ie-ser/">NIST Chemistry WebBook</a>.</p>
-</blockquote>
-<p>In the database we also include the optimized geometries and computed electron orbitals. The orbitals can be used to recompute the BEB cross sections in applications as desired, with the format in <code>NIST_orbitals/</code> matching that in the <a href="https://physics.nist.gov/PhysRefData/Ionization/molTable.html">NIST database</a>.</p>
-<blockquote class="blockquote">
-<p>Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues. We have added a notebook in the <code>scripts/</code> folder to demonstrate this.</p>
-</blockquote>
-<p>Finally, we include chemical networks for the ionization chemistry in both the <a href="http://udfa.ajmarkwick.net/index.php">UMIST</a> and <a href="https://kida.astrochem-tools.org/">KIDA</a> formats.</p>
-</section>
-<section id="citing-the-database" class="level2">
-<h2 class="anchored" data-anchor-id="citing-the-database">Citing the database</h2>
-<p>We strongly believe that astrophysical and astrochemical modeling should cite the intrinsic data that goes into the chemical networks and model. If you use the data within this database, we request that you cite the database as</p>
-<pre class="{bibtex}"><code>@ARTICLE{Gaches2024,
-       author = {{Gaches}, Brandt A.~L. and {Grassi}, Tommaso and {Vogt-Geisse}, Stefan and {Bovolenta}, Giulia M. and {Vallance}, Claire and {Heathcote}, David and {Padovani}, Marco and {Bovino}, Stefano and {Gorai}, Prasanta},
-        title = "{The Astrochemistry Low-energy Electron Cross-Section (ALeCS) database I. Semi-empirical electron-impact ionization cross-section calculations and ionization rates}",
-      journal = {arXiv e-prints},
-     keywords = {Astrophysics - Astrophysics of Galaxies, Astrophysics - Instrumentation and Methods for Astrophysics, Physics - Chemical Physics},
-         year = 2023,
-        month = oct,
-          eid = {arXiv:2310.10739},
-        pages = {arXiv:2310.10739},
-          doi = {10.48550/arXiv.2310.10739},
-archivePrefix = {arXiv},
-       eprint = {2310.10739},
- primaryClass = {astro-ph.GA},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}</code></pre>
-<p>If you use the Hartree-Fock data, from <a href="https://dx.doi.org/10.1088/1361-6455/aadd42">Heathcote &amp; Valance (2018)</a> and <a href="https://ui.adsabs.harvard.edu/abs/2019MolPh.117.3066Z">Zhou et al.&nbsp;2019</a>, we request you cite the papers:</p>
-<pre class="{bibtex}"><code>@article{Heathcote2018,
-    doi = {10.1088/1361-6455/aadd42},
-    url = {https://dx.doi.org/10.1088/1361-6455/aadd42},
-    year = {2018},
-    month = {sep},
-    publisher = {IOP Publishing},
-    volume = {51},
-    number = {19},
-    pages = {195203},
-    author = {David Heathcote and Claire Vallance},
-    title = {Total electron ionization cross-sections for neutral molecules relevant to astrochemistry},
-    journal = {Journal of Physics B: Atomic, Molecular and Optical Physics}
-}</code></pre>
-<pre class="{bibtex}"><code>@ARTICLE{Zhou2019,
-       author = {{Zhou}, Weiwei and {Wilkinson}, Lorna and {Lee}, Jason W.~L. and {Heathcote}, David and {Vallance}, Claire},
-        title = "{Total electron ionization cross-sections for molecules of astrochemical interest}",
-      journal = {Molecular Physics},
-         year = 2019,
-        month = nov,
-       volume = {117},
-       number = {21},
-        pages = {3066-3075},
-          doi = {10.1080/00268976.2019.1583389},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2019MolPh.117.3066Z},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}</code></pre>
-<p>Finally, if you use any data from subsequent releases, we request that you cite the paper relevant for that release and the original source.</p>
-</section>
-<section id="support" class="level2">
-<h2 class="anchored" data-anchor-id="support">Support</h2>
-<p>We acknowledge support from Chalmers University of Technology and the Chalmers Initiative on Cosmic Origins. The MP2 and CAM-B3LYP calculations were performed on the Vera computing facility managed by the Chalmers Centre for Computational Science and Engineering.</p>
+</div>
+</div>
+<p>Now, we can visualize the difference between the average electron kinetic energies.</p>
+<div id="b13bdcb5" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">8</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> hf_data[:,<span class="dv">1</span>]:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">0.75</span>, <span class="fl">1.25</span>], [k,k], <span class="st">'b-'</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> mp2_data[:,<span class="dv">1</span>]:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">1.75</span>, <span class="fl">2.25</span>], [k,k], <span class="st">'r-'</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> ccsdt_data[:,<span class="dv">1</span>]:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">2.75</span>, <span class="fl">3.25</span>], [k,k], <span class="st">'k-'</span>, lw<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="fl">0.5</span>, <span class="fl">3.5</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">60</span>,<span class="dv">80</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>ax.set_xticks([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],[<span class="st">"HF"</span>, <span class="st">"MP2"</span>, <span class="st">"CCSD(T)"</span>])</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>ax.tick_params(which<span class="op">=</span><span class="st">'both'</span>, axis<span class="op">=</span><span class="st">'both'</span>, labelsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Method"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Kinetic Energy (eV)"</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="orbDiff_files/figure-html/cell-6-output-1.png" width="394" height="672" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

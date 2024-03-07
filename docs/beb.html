@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Astrochemistry Low-energy electron Cross-Section Database - The Astrochemistry Low-energy electron Cross-Section Database</title>
+<title>Astrochemistry Low-energy electron Cross-Section Database - Semi-empirical cross sections</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./index.html">The Astrochemistry Low-energy electron Cross-Section Database</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geom.html">What is calculated?</a></li><li class="breadcrumb-item"><a href="./beb.html">Semi-empirical cross sections</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -133,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Astrochemistry Low-energy electron Cross-Section Database</span></a>
   </div>
 </li>
@@ -162,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./beb.html" class="sidebar-item-text sidebar-link">
+  <a href="./beb.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Semi-empirical cross sections</span></a>
   </div>
 </li>
@@ -236,21 +265,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#initial-release" id="toc-initial-release" class="nav-link" data-scroll-target="#initial-release">Initial Release</a></li>
-  <li><a href="#citing-the-database" id="toc-citing-the-database" class="nav-link" data-scroll-target="#citing-the-database">Citing the database</a></li>
-  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
-  </ul></li>
+  <li><a href="#binary-encounter-bethe-beb" id="toc-binary-encounter-bethe-beb" class="nav-link active" data-scroll-target="#binary-encounter-bethe-beb">Binary-encounter Bethe (BEB)</a></li>
+  <li><a href="#screening-correcting-additivity-rule-scar" id="toc-screening-correcting-additivity-rule-scar" class="nav-link" data-scroll-target="#screening-correcting-additivity-rule-scar">Screening-correcting additivity rule (SCAR)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./index.html">The Astrochemistry Low-energy electron Cross-Section Database</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geom.html">What is calculated?</a></li><li class="breadcrumb-item"><a href="./beb.html">Semi-empirical cross sections</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Astrochemistry Low-energy electron Cross-Section Database</h1>
+<h1 class="title">Semi-empirical cross sections</h1>
 </div>
 
 
@@ -267,80 +292,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/alecs_logo.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The <strong>A</strong>strochemistry <strong>L</strong>ow-energy <strong>e</strong>lectron <strong>C</strong>ross-<strong>S</strong>ection Database (<a href="astrobrandt.github.io/ALeCS/">ALeCS</a>) is a new database for useful electron-impact cross sections, ionization and excitation rates, optimized geometries, etc. The collaboration is an interdisciplinary group of astronomers and chemists. The database is currently on v2024.02. If there is a particular molecule of interest in which data is missing, or if you are interested in joining the collaboration, please feel free to reach out or open a GitHub Discussions. Much of the explainations within these docs are from the <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract">database release paper</a>.</p>
-<section id="initial-release" class="level2">
-<h2 class="anchored" data-anchor-id="initial-release">Initial Release</h2>
-<p>The initial release of the database, described in <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract">Gaches et al.&nbsp;(2024)</a>, includes total electron-impact ionization cross sections for over 200 neutral molecules and a few ions spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the <a href="./geom.html">Binary-encounter Bethe</a> (BEB) formalism using optimize molecule geometries and electronic structures computed using the <a href="https://www.gaussian.com/">Gaussian16</a> and <a href="https://www.molpro.net/">MolPro</a> codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.</p>
-<blockquote class="blockquote">
-<p>Evaluations of ionization potentials can vary drastically between each other, and for many molecules experimental values vary as well. We suggest those interested in the ionization potentials to also consult the <a href="https://webbook.nist.gov/chemistry/ie-ser/">NIST Chemistry WebBook</a>.</p>
-</blockquote>
-<p>In the database we also include the optimized geometries and computed electron orbitals. The orbitals can be used to recompute the BEB cross sections in applications as desired, with the format in <code>NIST_orbitals/</code> matching that in the <a href="https://physics.nist.gov/PhysRefData/Ionization/molTable.html">NIST database</a>.</p>
-<blockquote class="blockquote">
-<p>Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues. We have added a notebook in the <code>scripts/</code> folder to demonstrate this.</p>
-</blockquote>
-<p>Finally, we include chemical networks for the ionization chemistry in both the <a href="http://udfa.ajmarkwick.net/index.php">UMIST</a> and <a href="https://kida.astrochem-tools.org/">KIDA</a> formats.</p>
+<section id="binary-encounter-bethe-beb" class="level1">
+<h1>Binary-encounter Bethe (BEB)</h1>
+<p>The semi-empirical <em>binary-encounter Bethe</em> (BEB) cross section was developed as a simplification of the binary-encounter dipole cross section of <a href="https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K">Kim &amp; Rudd (1994)</a> and <a href="https://ui.adsabs.harvard.edu/abs/1996JChPh.104.2956H">Hwang et al.&nbsp;(1994)</a>. This cross section has been found to provide a reasonable match with experimental data, and requires only knowledge of the molecular orbital energies. BEB cross section are the base of numerous cross-section databases, in particular the NIST database. The BEB cross section is defined as:</p>
+<p><span class="math display">\[
+    \sigma_{m, {\rm BEB}} = \sum_{\ell}  \left [ \frac{S_\ell}{t_\ell + (u_\ell + 1)}\right ] \Biggl [ \frac{\ln t_\ell}{2} \left ( 1 - \frac{1}{t_\ell^2} \right ) +  \left ( 1 - \frac{1}{t_\ell} - \frac{\ln t_\ell}{t_\ell + 1}\right ) \Biggr ],
+\]</span></p>
+<p>where the sum is over orbitals, indexed <span class="math inline">\(\ell\)</span>, <span class="math inline">\(t_\ell =  E_e/B_\ell\)</span>, <span class="math inline">\(u_\ell = U_\ell/B_\ell\)</span> and <span class="math inline">\(S_\ell = 4\pi a_0^2 n_\ell \left ( \frac{R_{\infty}}{B_\ell}\right )^2\)</span>. Here, <span class="math inline">\(B_\ell\)</span> and <span class="math inline">\(U_\ell\)</span> are the orbital binding and orbital kinetic energies of the ejected electron, respectively, <span class="math inline">\(n_\ell\)</span> is the orbital occupation number, and <span class="math inline">\(R_{\infty}\)</span> is the Rydberg constant. The parameters <span class="math inline">\(B_\ell\)</span> and <span class="math inline">\(U_\ell\)</span> are generally computed using electronic structure methods.</p>
+<p>The database also includes a modified version of the BEB cross section (dBEB) to dampen the impact of orbitals with binding energies greater than the ionization potential. In dBEB cross-section formulation, the <span class="math inline">\(B_\ell\)</span> is scaled by an exponential function such that the modified binding energy of orbital <span class="math inline">\(\ell\)</span> is given by: <span class="math display">\[
+    B_\ell^\prime = B_\ell e^{-(1 - B_\ell/{\rm IP})},
+\]</span></p>
+<p>In general, BEB cross sections underpredict experimental results at higher energies since they only account for single ionizations, while experimental data, where the measured signal is generally the ion current, includes contributions from multiple ionization events which contribute more to the measured signal per event than single ionizations.</p>
+<p>Future updates to the database will utilize the relativistic formalism of the BEB/</p>
 </section>
-<section id="citing-the-database" class="level2">
-<h2 class="anchored" data-anchor-id="citing-the-database">Citing the database</h2>
-<p>We strongly believe that astrophysical and astrochemical modeling should cite the intrinsic data that goes into the chemical networks and model. If you use the data within this database, we request that you cite the database as</p>
-<pre class="{bibtex}"><code>@ARTICLE{Gaches2024,
-       author = {{Gaches}, Brandt A.~L. and {Grassi}, Tommaso and {Vogt-Geisse}, Stefan and {Bovolenta}, Giulia M. and {Vallance}, Claire and {Heathcote}, David and {Padovani}, Marco and {Bovino}, Stefano and {Gorai}, Prasanta},
-        title = "{The Astrochemistry Low-energy Electron Cross-Section (ALeCS) database I. Semi-empirical electron-impact ionization cross-section calculations and ionization rates}",
-      journal = {arXiv e-prints},
-     keywords = {Astrophysics - Astrophysics of Galaxies, Astrophysics - Instrumentation and Methods for Astrophysics, Physics - Chemical Physics},
-         year = 2023,
-        month = oct,
-          eid = {arXiv:2310.10739},
-        pages = {arXiv:2310.10739},
-          doi = {10.48550/arXiv.2310.10739},
-archivePrefix = {arXiv},
-       eprint = {2310.10739},
- primaryClass = {astro-ph.GA},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}</code></pre>
-<p>If you use the Hartree-Fock data, from <a href="https://dx.doi.org/10.1088/1361-6455/aadd42">Heathcote &amp; Valance (2018)</a> and <a href="https://ui.adsabs.harvard.edu/abs/2019MolPh.117.3066Z">Zhou et al.&nbsp;2019</a>, we request you cite the papers:</p>
-<pre class="{bibtex}"><code>@article{Heathcote2018,
-    doi = {10.1088/1361-6455/aadd42},
-    url = {https://dx.doi.org/10.1088/1361-6455/aadd42},
-    year = {2018},
-    month = {sep},
-    publisher = {IOP Publishing},
-    volume = {51},
-    number = {19},
-    pages = {195203},
-    author = {David Heathcote and Claire Vallance},
-    title = {Total electron ionization cross-sections for neutral molecules relevant to astrochemistry},
-    journal = {Journal of Physics B: Atomic, Molecular and Optical Physics}
-}</code></pre>
-<pre class="{bibtex}"><code>@ARTICLE{Zhou2019,
-       author = {{Zhou}, Weiwei and {Wilkinson}, Lorna and {Lee}, Jason W.~L. and {Heathcote}, David and {Vallance}, Claire},
-        title = "{Total electron ionization cross-sections for molecules of astrochemical interest}",
-      journal = {Molecular Physics},
-         year = 2019,
-        month = nov,
-       volume = {117},
-       number = {21},
-        pages = {3066-3075},
-          doi = {10.1080/00268976.2019.1583389},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2019MolPh.117.3066Z},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}</code></pre>
-<p>Finally, if you use any data from subsequent releases, we request that you cite the paper relevant for that release and the original source.</p>
-</section>
-<section id="support" class="level2">
-<h2 class="anchored" data-anchor-id="support">Support</h2>
-<p>We acknowledge support from Chalmers University of Technology and the Chalmers Initiative on Cosmic Origins. The MP2 and CAM-B3LYP calculations were performed on the Vera computing facility managed by the Chalmers Centre for Computational Science and Engineering.</p>
+<section id="screening-correcting-additivity-rule-scar" class="level1">
+<h1>Screening-correcting additivity rule (SCAR)</h1>
+<p>The <em>Screening-corrected additivity rule</em> (SCAR) of <a href="https://ui.adsabs.harvard.edu/abs/2003PhLA..317..458B">Blanco &amp; Garcia (2003)</a> and <a href="https://ui.adsabs.harvard.edu/abs/2010PhLA..374.4420B">Blanco et al.&nbsp;(2010)</a> enables the quick computation of molecular cross sections using just a pre-computed basis of electron-atom ionization cross sections. The only required molecular data is an optimized geometry, which are more readily available from online databases compared to the molecular orbitals. SCAR is an additivity rule which takes into account the effective geometrical overlap of the atomic electron cross sections. The cross section for a specific molecule, <span class="math inline">\(m\)</span>, is given by <span class="math display">\[
+    \sigma_{m, {\rm SCAR}}(E) = \sum_i s_i \sigma_i(E),
+\]</span> where the sum is carried out over all constituent atoms and <span class="math inline">\(\sigma_i(E)\)</span> is the electron-atom ionization cross section for atom, <span class="math inline">\(i\)</span>. The additivity coefficients, <span class="math inline">\(s_i\)</span>, are <span class="math display">\[
+s_i = \sum_{k=1}^{N_k} \frac{\left ( -1\right )^{k+1} \varepsilon_i^{(k)}}{k!},
+\]</span> where <span class="math inline">\(N_k\)</span> is the number of perturbation terms included. The coefficients, <span class="math inline">\(\varepsilon_i^{(k)}\)</span>, follow a recursion relation <span class="math display">\[
+\varepsilon_i^{(1)} = 1
+\]</span> <span class="math display">\[
+\varepsilon_i^{(k)} = \frac{N_k - k + 1}{N_k - 1} \sum_{\rm j(\neq i)} \frac{\sigma_j \varepsilon_j^{(k-1)}}{\alpha_{ji}}\,, k = 2,\ldots,N\,,
+\]</span> where <span class="math inline">\(\alpha_{ji} = \max(4\pi r_{ij}^2, \sigma_i, \sigma_j)\)</span>, and <span class="math inline">\(r_{ij}\)</span> is the distance between atoms <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>. The terms in the recursive relation account for the overlap of the cross sections of all the individual items. Due to the recursive nature, including higher-order correction terms leads to an exponential increase in computational cost. For the cross sections in this database, we only include upto 6-atom screening, as highe order factors were found to be less important for the moelcules in the database.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

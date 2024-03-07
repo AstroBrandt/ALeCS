@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/main.css">
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--<meta name="keywords" content="alecs, low energy, electron, cross section, astrochemistry, quantum chemistry, chalmers, brandt, gaches">-->
+		<meta name="description" content="The Astrochemistry Low-energy electron Cross Section (ALeCS) database is a compilation of low-energy electron cross sections and molecule information for molecules of astrochemical interest.">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+		<link rel="manifest" href="/assets/icons/site.webmanifest">
+		<link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+		<meta name="theme-color" content="##001464">
+        <title>ALeCS Database</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-expand-lg justify-content-between my-2 sticky-top glass px-5">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img class="img-flud" id="headerLogo" src="images/alecs_logo.svg" height="36">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto mx-4">
+                        <a href="#home" class="nav-link"><b>Home</b></a>
+                        <a href="#science" class="nav-link"><b>Science</b></a>
+                        <a href="#meet" class="nav-link"><b>Meet Us</b></a>
+                        <a href="#resources" class="nav-link text-dark"><b>Resources</b></a>
+                        <a href="#direct" class="nav-link text-dark"><b>Mini App</b></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container py-5 mx-5 text-center rounded" id="home">
+                <img class="image-fluid" src="images/alecs_logo.svg" alt="">
+                <h2 class="display-5 fw-bold"><b>A</b>strochemistry <b>L</b>ow-energy <b>e</b>lectron <b>C</b>ross <b>S</b>ection Database</h2>
+                <div class="col-lg-8 mx-auto fw-light">
+                    <p class="fs-3 mb-4">The Astrochemistry low-energy electron cross section database is a compilation of electron-impact cross sections for molecules of astrochemical interest. This living database is an international collaboration between astronomers and laboratory and theoretical chemists.</p>
+                    <p class="fs-3 mb-4"><i class="fa fa-github"></i> <a href = "https://github.com/AstroBrandt/ALeCS">GitHub repository</a></p>
+                </div>
+        </div>
+
+
+        <div class="container py-5 m-5 shadow rounded glass" id="science">
+            <div class="row align-items-center">
+                <div class="col-xs-12 col-lg-6 col-xl-6 text-center">
+                    <h2>Initial Release Version</h2>
+                    <hr>
+                    <p class="px-4 fs-4" style="text-align: justify;">The current version of the database includes the total ionization electron-impact cross sections, molecule structures, atomic orbitals and computed ionization potentials for over 150 neutral molecules. The cross sections are calculated using the binary-encounter Bethe model with atomic orbitals calculated using several different levels of quantum chemical theory. Ionization potentials are also presented at both the CCSD(T)/CBS and CAM-B3LPY/aug-cc-pVQZ levels.</p>
+                </div>
+                <div class="col-xs-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" id="xsecs" src="images/cross_sections_site.png">
+                    <p class="fs-6" style="text-align: justify;"><b>Description:</b> <em>Total ionization electron-impact cross sections for a subset of the ALeCS database.</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5 m-5 text-center shadow rounded glass" id="meet" >
+            <div class="row justify-content-center">
+                <h2>Meet the ALeCS Team</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitBG.jpg">
+                    <h2 class="fw-normal">PI: Brandt Gaches</h2>
+                    <p class="lh-1"><span class="fw-bold">Cosmic Origins Postdoctoral Fellow</span><br><span class="fw-light">Chalmers University of Technology</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitSB.png">
+                    <h2 class="fw-normal">Stefano Bovino</h2>
+                    <p class="lh-1"><span class="fw-bold">Associate Professor</span><br><span class="fw-light">Sapienza University of Rome</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitPG.png">
+                    <h2 class="fw-normal">Prasanta Gorai</h2>
+                    <p class="lh-1"><span class="fw-bold">Cosmic Origins Postdoctoral Fellow</span><br><span class="fw-light">Chalmers University of Technology &amp; Gothenburg University</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitTG.png">
+                    <h2 class="fw-normal">Tommaso Grassi</h2>
+                    <p class="lh-1"><span class="fw-bold">Scientist</span><br><span class="fw-light">Max Planck Institute for Extraterrestrial Physics</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitMP.png">
+                    <h2 class="fw-normal">Marco Padovani</h2>
+                    <p class="lh-1"><span class="fw-bold">Scientist</span><br><span class="fw-light">INAF-Osservatorio Astrofisico di Arcetri</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitSG.png">
+                    <h2 class="fw-normal">Stefan Geisse</h2>
+                    <p class="lh-1"><span class="fw-bold">Professor</span><br><span class="fw-light">Universidad de Concepción</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitGB.png">
+                    <h2 class="fw-normal">Giulia Bovolenta</h2>
+                    <p class="lh-1"><span class="fw-bold">PhD Student</span><br><span class="fw-light">Universidad de Concepción</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitCV.png">
+                    <h2 class="fw-normal">Claire Vallance</h2>
+                    <p class="lh-1"><span class="fw-bold">Professor</span><br><span class="fw-light">University of Oxford</span></p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <img class="rounded-circle" width="140" height="140" src="images/portraitDH.png">
+                    <h2 class="fw-normal">David Heathcote</h2>
+                    <p class="lh-1"><span class="fw-bold">Postdoctoral Researcher</span><br><span class="fw-light">University of Oxford</span></p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <p class="fs-6 fw-light">These quantum chemical calculations using the Gaussian16 were run on the Vera cluster, supported by the Chalmers Centre for Computational Science and Engineering (C3SE). BG acknowledges support from the Chalmers Initative on Cosmic Origins (CICO) at Chalmers University of Technology in Gothenburg, SE.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <img width="33%" id="chalmersLogo" src="images/ChalmersU_black_right.png" alt="">
+                    <img width="33%" id="c3seLogo" src="images/c3se_banner_color.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5 m-5 text-center shadow rounded glass" id="resources">
+            <div class="row">
+                <h2>ALeCS Publications</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 fs-4">
+                    <p>All in good time...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5 m-5 text-center shadow rounded glass" id="direct">
+            <iframe
+                src="https://alecsapp.streamlit.app/?embed=true&embed_options=light_theme&embed_options=disable_scrolling"
+                height="900px"
+                style="width:100%;border:none;"
+                ></iframe>
+        </div>
+
+        <div class="bg"></div>
+        <div class="rbg"></div>
+        <!--<div class="area">
+            <ul class="waters">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div>-->
+        
+        <footer class="container d-flex justify-content-between m-5">
+            <small>&copy; Brandt Gaches. Last updated August 2023.</small>
+            <small>Website made with <a href="https://getbootstrap.com/">Boostrap 5</a></small>
+          </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script> 
+        <script src="https://kit.fontawesome.com/bc008efe42.js" crossorigin="anonymous"></script>
+    </body>
+</html>

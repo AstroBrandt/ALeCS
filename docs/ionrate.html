@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Astrochemistry Low-energy electron Cross-Section Database - The Astrochemistry Low-energy electron Cross-Section Database</title>
+<title>Astrochemistry Low-energy electron Cross-Section Database - Computing Ionization Rates</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./index.html">The Astrochemistry Low-energy electron Cross-Section Database</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geom.html">What is calculated?</a></li><li class="breadcrumb-item"><a href="./ionrate.html">Computing Ionization Rates</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -133,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The Astrochemistry Low-energy electron Cross-Section Database</span></a>
   </div>
 </li>
@@ -168,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ionrate.html" class="sidebar-item-text sidebar-link">
+  <a href="./ionrate.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Computing Ionization Rates</span></a>
   </div>
 </li>
@@ -236,21 +265,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
-  <ul class="collapse">
-  <li><a href="#initial-release" id="toc-initial-release" class="nav-link" data-scroll-target="#initial-release">Initial Release</a></li>
-  <li><a href="#citing-the-database" id="toc-citing-the-database" class="nav-link" data-scroll-target="#citing-the-database">Citing the database</a></li>
-  <li><a href="#support" id="toc-support" class="nav-link" data-scroll-target="#support">Support</a></li>
-  </ul></li>
+  <li><a href="#definition-of-an-ionization-rate-and-ionization-rate-coefficient" id="toc-definition-of-an-ionization-rate-and-ionization-rate-coefficient" class="nav-link active" data-scroll-target="#definition-of-an-ionization-rate-and-ionization-rate-coefficient">Definition of an ionization rate and ionization rate coefficient</a></li>
+  <li><a href="#irradiation-fluxes-used-in-the-database" id="toc-irradiation-fluxes-used-in-the-database" class="nav-link" data-scroll-target="#irradiation-fluxes-used-in-the-database">Irradiation fluxes used in the database</a></li>
+  <li><a href="#depth-dependent-ionization-rates" id="toc-depth-dependent-ionization-rates" class="nav-link" data-scroll-target="#depth-dependent-ionization-rates">Depth-dependent ionization rates</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li><li class="breadcrumb-item"><a href="./index.html">The Astrochemistry Low-energy electron Cross-Section Database</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geom.html">What is calculated?</a></li><li class="breadcrumb-item"><a href="./ionrate.html">Computing Ionization Rates</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The Astrochemistry Low-energy electron Cross-Section Database</h1>
+<h1 class="title">Computing Ionization Rates</h1>
 </div>
 
 
@@ -267,80 +293,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/alecs_logo.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
-</figure>
-</div>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>The <strong>A</strong>strochemistry <strong>L</strong>ow-energy <strong>e</strong>lectron <strong>C</strong>ross-<strong>S</strong>ection Database (<a href="astrobrandt.github.io/ALeCS/">ALeCS</a>) is a new database for useful electron-impact cross sections, ionization and excitation rates, optimized geometries, etc. The collaboration is an interdisciplinary group of astronomers and chemists. The database is currently on v2024.02. If there is a particular molecule of interest in which data is missing, or if you are interested in joining the collaboration, please feel free to reach out or open a GitHub Discussions. Much of the explainations within these docs are from the <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract">database release paper</a>.</p>
-<section id="initial-release" class="level2">
-<h2 class="anchored" data-anchor-id="initial-release">Initial Release</h2>
-<p>The initial release of the database, described in <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract">Gaches et al.&nbsp;(2024)</a>, includes total electron-impact ionization cross sections for over 200 neutral molecules and a few ions spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the <a href="./geom.html">Binary-encounter Bethe</a> (BEB) formalism using optimize molecule geometries and electronic structures computed using the <a href="https://www.gaussian.com/">Gaussian16</a> and <a href="https://www.molpro.net/">MolPro</a> codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.</p>
-<blockquote class="blockquote">
-<p>Evaluations of ionization potentials can vary drastically between each other, and for many molecules experimental values vary as well. We suggest those interested in the ionization potentials to also consult the <a href="https://webbook.nist.gov/chemistry/ie-ser/">NIST Chemistry WebBook</a>.</p>
-</blockquote>
-<p>In the database we also include the optimized geometries and computed electron orbitals. The orbitals can be used to recompute the BEB cross sections in applications as desired, with the format in <code>NIST_orbitals/</code> matching that in the <a href="https://physics.nist.gov/PhysRefData/Ionization/molTable.html">NIST database</a>.</p>
-<blockquote class="blockquote">
-<p>Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues. We have added a notebook in the <code>scripts/</code> folder to demonstrate this.</p>
-</blockquote>
-<p>Finally, we include chemical networks for the ionization chemistry in both the <a href="http://udfa.ajmarkwick.net/index.php">UMIST</a> and <a href="https://kida.astrochem-tools.org/">KIDA</a> formats.</p>
+<section id="definition-of-an-ionization-rate-and-ionization-rate-coefficient" class="level1">
+<h1>Definition of an ionization rate and ionization rate coefficient</h1>
+<p>For the purposes of astrochemical cosmic-ray ionization rates, for a slab geometry, we define an ionization rate of some molecule, <span class="math inline">\(m\)</span>, by impacting particle, <span class="math inline">\(i\)</span>, as <span class="math display">\[
+\zeta_m = 2 \pi \int j_i(E_i) \sigma_{m, {\rm ion}}(E_i) dE_i.
+\]</span> For three-dimensional geometries, the prefactor in front is usually replaced by <span class="math inline">\(4\pi\)</span>.</p>
+<p>The above expression works if you have knowledge of the spectrum. However, in most astrochemical applications, the user instead only provides an ionization rate of either atomic or molecular hydrogen. These can either be just the so-called “primary” ionization rate, which accounts only for primary protons, or the “total” ionization rate which includes both primary protons and secondary electrons, or sometimes also primary electrons. In a particular astrochemical network, the rates are then given as <span class="math display">\[
+\zeta_m = \alpha_m \zeta_0
+\]</span> where <span class="math inline">\(\zeta_0\)</span> is a given reference rate, which may depend on the database used. Therefore, the user should be careful which ionization rate is used in both the chemistry and heating in their code. In our database, we report the <span class="math inline">\(\alpha_m\)</span> (denoted <span class="math inline">\(c_{m, T}\)</span> in the paper) using the <strong>total</strong> ionization rate including both protons and electrons, with the reference value is the <strong>total</strong> ionization rate of molecular hydrogen, H<sub>2</sub>. See review in the chapter <em>Cosmic rays: physics, chemistry, and computational challenges</em> <a href="https://ui.adsabs.harvard.edu/abs/2024asmo.book..189P/abstract">Padovani &amp; Gaches (2023)</a>, in the recent (and highly recommended) book <em>Astrochemical Modeling: Practical Aspects of Microphysics in Numerical Simulations</em>.</p>
 </section>
-<section id="citing-the-database" class="level2">
-<h2 class="anchored" data-anchor-id="citing-the-database">Citing the database</h2>
-<p>We strongly believe that astrophysical and astrochemical modeling should cite the intrinsic data that goes into the chemical networks and model. If you use the data within this database, we request that you cite the database as</p>
-<pre class="{bibtex}"><code>@ARTICLE{Gaches2024,
-       author = {{Gaches}, Brandt A.~L. and {Grassi}, Tommaso and {Vogt-Geisse}, Stefan and {Bovolenta}, Giulia M. and {Vallance}, Claire and {Heathcote}, David and {Padovani}, Marco and {Bovino}, Stefano and {Gorai}, Prasanta},
-        title = "{The Astrochemistry Low-energy Electron Cross-Section (ALeCS) database I. Semi-empirical electron-impact ionization cross-section calculations and ionization rates}",
-      journal = {arXiv e-prints},
-     keywords = {Astrophysics - Astrophysics of Galaxies, Astrophysics - Instrumentation and Methods for Astrophysics, Physics - Chemical Physics},
-         year = 2023,
-        month = oct,
-          eid = {arXiv:2310.10739},
-        pages = {arXiv:2310.10739},
-          doi = {10.48550/arXiv.2310.10739},
-archivePrefix = {arXiv},
-       eprint = {2310.10739},
- primaryClass = {astro-ph.GA},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}</code></pre>
-<p>If you use the Hartree-Fock data, from <a href="https://dx.doi.org/10.1088/1361-6455/aadd42">Heathcote &amp; Valance (2018)</a> and <a href="https://ui.adsabs.harvard.edu/abs/2019MolPh.117.3066Z">Zhou et al.&nbsp;2019</a>, we request you cite the papers:</p>
-<pre class="{bibtex}"><code>@article{Heathcote2018,
-    doi = {10.1088/1361-6455/aadd42},
-    url = {https://dx.doi.org/10.1088/1361-6455/aadd42},
-    year = {2018},
-    month = {sep},
-    publisher = {IOP Publishing},
-    volume = {51},
-    number = {19},
-    pages = {195203},
-    author = {David Heathcote and Claire Vallance},
-    title = {Total electron ionization cross-sections for neutral molecules relevant to astrochemistry},
-    journal = {Journal of Physics B: Atomic, Molecular and Optical Physics}
-}</code></pre>
-<pre class="{bibtex}"><code>@ARTICLE{Zhou2019,
-       author = {{Zhou}, Weiwei and {Wilkinson}, Lorna and {Lee}, Jason W.~L. and {Heathcote}, David and {Vallance}, Claire},
-        title = "{Total electron ionization cross-sections for molecules of astrochemical interest}",
-      journal = {Molecular Physics},
-         year = 2019,
-        month = nov,
-       volume = {117},
-       number = {21},
-        pages = {3066-3075},
-          doi = {10.1080/00268976.2019.1583389},
-       adsurl = {https://ui.adsabs.harvard.edu/abs/2019MolPh.117.3066Z},
-      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}</code></pre>
-<p>Finally, if you use any data from subsequent releases, we request that you cite the paper relevant for that release and the original source.</p>
+<section id="irradiation-fluxes-used-in-the-database" class="level1">
+<h1>Irradiation fluxes used in the database</h1>
+<p>The primary interest of this database is for astrochemical modeling, which generally normalized the ionization rates to reference interstellar mediun (ISM) rates.</p>
+<p>For computing the above ionization rates, we use both a primary proton and primary electron interstellar spectrum which reproduces diffuse ISM inferred ionization rates (<a href="https://ui.adsabs.harvard.edu/abs/2018A&amp;A...614A.111P">Padovani et al.&nbsp;2018</a>). Secondary electrons are computing following the more rigorous and complete theory from <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...909..107I/abstract">Ivlev et al.&nbsp;(2021)</a> including important losses from vibrational H<sub>2</sub> excitations (see <a href="https://ui.adsabs.harvard.edu/abs/2022A%26A...658A.189P/exportcitation">Padovani et al.&nbsp;2022</a>). We include the depth-depending ionization rates, and then average over typical depths of molecular clouds.</p>
 </section>
-<section id="support" class="level2">
-<h2 class="anchored" data-anchor-id="support">Support</h2>
-<p>We acknowledge support from Chalmers University of Technology and the Chalmers Initiative on Cosmic Origins. The MP2 and CAM-B3LYP calculations were performed on the Vera computing facility managed by the Chalmers Centre for Computational Science and Engineering.</p>
+<section id="depth-dependent-ionization-rates" class="level1">
+<h1>Depth-dependent ionization rates</h1>
+<p>The depth-dependent electron ionization rate of a molecule, <span class="math inline">\(m\)</span>, is given by adding the contributions of primary protons, <span class="math inline">\(\zeta_{p, m}(N_{\rm H_2})\)</span>, using the approximation <span class="math inline">\({m_e}E_p \approx {m_p}E_e\)</span>,<br>
+<span class="math display">\[
+    \zeta_{p,m}(N_{\rm H_2}) = 2\pi \int j_{p}(E_p, N_{\rm H_2}) \,\sigma_{m}\left[(m_e/m_p) E_p\right]\,\mathrm{d}E_p,
+\]</span> primary electrons, <span class="math display">\[
+    \zeta_{e,m}(N_{\rm H_2}) = 2\pi \int j_{e}(E_e, N_{\rm H_2}) \,\sigma_{m}(E_e)\,\mathrm{d}E_e,
+\]</span> and secondary electrons from both primary protons and electrons <span class="math display">\[
+    \zeta_{se,m}(N_{\rm H_2}) = 4\pi \int j_{se}(E_e, N_{\rm H_2}) \,\sigma_{m}(E_e)\,\mathrm{d}E_e,
+\]</span> where <span class="math inline">\(se\)</span> represents secondary electrons. The factors of <span class="math inline">\(2\pi\)</span> and <span class="math inline">\(4\pi\)</span> account for fluxes which are assumed to be plane parallel and isotropic, respectively. The total ionization rate for a molecule is then, <span class="math inline">\(\zeta_{m} = \zeta_{p,m} + \zeta_{e,m} + \zeta_{se,m}\)</span>. The factor of <span class="math inline">\(4\pi\)</span> comes from treating the secondary electrons as an isotropic local source.</p>
+<p>The column-dependent total ionization rate coefficient for species <span class="math inline">\(m\)</span>, <span class="math inline">\(c_{m, T}(N_{\rm H_2})\)</span> is <span class="math display">\[
+    \zeta_{m, T}(N_{\rm H_2}) = c_{m, T}(N_{\rm H_2})\,\zeta_{{\rm H_2},T}(N_{\rm H_2}).
+\]</span></p>
+<p>This is computed for a sample of column densities from <span class="math inline">\(N({\rm H_2}) = 10^{20} - 10^{23}\)</span> cm<sup>-2</sup>. The average rate coefficient reported in the database is <span class="math display">\[
+\alpha_m = \bar{c}_{m, T} = \langle c_{m, T}(N_{\rm H_2}) \rangle.
+\]</span></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
