@@ -46,7 +46,7 @@ Our current collaboration is
 - Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
 - Stefano Bovino, Associate Professor, Sapienza University of Rome, Italy
 - Giulia Bovolenta, PhD Student, Universidad de Concepción, Chile
-- Prasanta Gorai, Cosmic Origins Fellow, Chalmers University of Technology & Gothenburg University, Sweden
+- Prasanta Gorai, Postdoctoral Fellow, University of Oslo, Norway
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
 - David Heathcote, Postdoctoral Researcher, University of Oxford, United Kingdom
 - Marco Padovani, Scientist, INAF-Observatorio Astrofisico di Arcetri, Italy
