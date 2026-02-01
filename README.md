@@ -15,12 +15,12 @@ This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C*
 [astrobrandt.github.io/ALeCS/]: astrobrandt.github.io/ALeCS/
 
 ## Initial Release
-The initial release of the database, described in [Gaches et al. (2024)](https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract), includes total electron-impact ionization cross sections for over 200 neutral molecules and a few ions spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the [Binary-encounter Bethe](https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K/abstract) (BEB) formalism using optimize molecule geometries and electronic structures computed using the [Gaussian16](https://www.gaussian.com/) and [MolPro](https://www.molpro.net/) codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.
+The initial release of the database, described in [Gaches et al. (2024)](https://ui.adsabs.harvard.edu/abs/2023arXiv231010739G/abstract), includes total electron-impact ionization cross sections for over 200 neutral molecules and a few ions spanning electron energies from 10 eV to 5 keV. The cross sections were calculated following the [Binary-encounter Bethe](https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K/abstract) (BEB) formalism using optimized molecule geometries and electronic structures computed using the [Gaussian16](https://www.gaussian.com/) and [MolPro](https://www.molpro.net/) codes. The initial release also includes computed ionization potentials for most of the molecules, computed at two different levels of theory: CCSD(T)/aug-cc-pVTZ+CAM-B3LYP/aug-cc-pVTZ and CCSD(T)/CBS.
 
 > [!NOTE]
-> Evaluations of ionization potentials can vary drastically between each other, and for many molecules experimental values vary as well. We suggest those interested in the ionization potentials to also consult the [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/ie-ser/).
+> Evaluations of ionization potentials can vary drastically between each other, and for many molecules, experimental values vary as well. We suggest those interested in the ionization potentials to also consult the [NIST Chemistry WebBook](https://webbook.nist.gov/chemistry/ie-ser/).
 
-In the database we also include the optimized geometries and computed electron orbitals. The orbitals can be used to recompute the BEB cross sections in applications as desired, with the format in `NIST_orbitals/` matching that in the [NIST database](https://physics.nist.gov/PhysRefData/Ionization/molTable.html).
+In the database, we also include the optimized geometries and computed electron orbitals. The orbitals can be used to recompute the BEB cross sections in applications as desired, with the format in `NIST_orbitals/` matching that in the [NIST database](https://physics.nist.gov/PhysRefData/Ionization/molTable.html).
 
 > [!NOTE]
 > Using the orbitals directly is preferable for those wishing to use the cross sections outside the energy range in the raw data, to avoid extrapolation issues. We have added a notebook in the `scripts/` folder to demonstrate this.
@@ -36,16 +36,16 @@ The database folders are described as follows:
   * The MP2 and CCSD(T) geometries are saved as PDB files. The HF geometries are saved as XYZ files. These were checked and readable by GaussView and Avogadro (versions 1 and 2).
 - `ion_xs/`: This folder contains the total electron-impact ionization cross sections at HF, MP2 and CCSD(T) levels of theory. The folders contain different subsets of the molecules, with some overlap between them.
   * These files have two or three columns. The first column is always the energy in eV. The second column is the BEB cross section in units of $a_0^2$ where $a_0$ is the Bohr radius. The third column, if it is there, is the damped BEB cross section in units of $a_0^2$.
-  * In the `recommended/` folder there is the full sample of cross sections where for each species we give the recommended cross sections. These files are all two column containing **only** the BEB cross sections.
+  * In the `recommended/` folder there is the full sample of cross sections, where for each species we give the recommended cross sections. These files are all two column containing **only** the BEB cross sections.
 - `ips/`: There are several text files here containing the calculated ionization potentials at CAM-B3LYP/aug-cc-pVQZ and CCSD(T)/CBS levels of theory and the recommended values from the NIST Chemistry WebBook.
   * There is a file for each subset, with the first column being the chemical name and the second the ionization potential in eV.
 
 
 ## Collaboration
 Our current collaboration is
-- Brandt Gaches (PI), Cosmic Origins Fellow, Chalmers University of Technology, Sweden
+- Brandt Gaches (PI), Emmy Noether Junior Group Leader, Faculty of Physics, University of Duisburg-Essen, DE
 - Stefano Bovino, Associate Professor, Sapienza University of Rome, Italy
-- Giulia Bovolenta, PhD Student, Universidad de Concepción, Chile
+- Giulia Bovolenta, Postdoctoral Researcher, Atomistic Simulations, Italian Institute of Technology, Italy
 - Prasanta Gorai, Postdoctoral Fellow, University of Oslo, Norway
 - Tommaso Grassi, Scientist, Max Planck Institute for Extraterrestrial Physics, Germany
 - David Heathcote, Postdoctoral Researcher, University of Oxford, United Kingdom
@@ -53,7 +53,7 @@ Our current collaboration is
 - Claire Vallance, Professor, University of Oxford, United Kingdom
 - Stefan Vogt-Geisse, Professor, Universidad de Concepción, Chile
 
-The ALeCS database is an ongoing live project and open to community involvement. If you wish to get involved in this work, please feel free to send the PI an email. We have a broad interst in expanding the database to include a wide range of physical and energetic chemical processes relevant for astrochemical modeling.
+The ALeCS database is an ongoing live project and open to community involvement. If you wish to get involved in this work, please feel free to send the PI an email. We have a broad interest in expanding the database to include a wide range of physical and energetic chemical processes relevant for astrochemical modeling.
 
 ## Citing the database
 We strongly believe that astrophysical and astrochemical modeling should cite the intrinsic data that goes into the chemical networks and model. If you use the data within this database, we request that you cite the database as
@@ -109,4 +109,4 @@ If you use the Hartree-Fock computed data from [Heathcote & Valance (2018)](http
 Finally, if you use any data from subsequent releases, we request that you cite the paper relevant for that release.
 
 ## Support
-We acknowledge support from Chalmers University of Technology and the Chalmers Initiative on Cosmic Origins. The MP2 and CAM-B3LYP calculations were performed on the Vera computing facility managed by the Chalmers Centre for Computational Science and Engineering.
+We acknowledge previous support from Chalmers University of Technology and the Chalmers Initiative on Cosmic Origins during the first data release. The MP2 and CAM-B3LYP calculations were performed on the Vera computing facility managed by the Chalmers Centre for Computational Science and Engineering.
