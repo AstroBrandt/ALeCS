@@ -8,6 +8,10 @@
 
 This repository presents the **A**strochemistry **L**ow-energy **e**lectron **C**ross-**S**ection ([ALeCS](astrobrandt.github.io/ALeCS/)) database, the result of an international collaboration between astronomers and chemists. The database includes electron-impact cross section data for a wide range of molecules of astrochemical interest, ranging from simple diatomics such as carbon monoxide (CO) to complex organics (CH3OH, methanol) to prebiotics (NH2CHO, formamide).
 
+> [!IMPORTANT]
+> This repository will be moving to the new ALeCS organization repository: [https://github.com/alecs-db/ALeCS-db](https://github.com/alecs-db/ALeCS-db).
+> The repository will be mirrored here for major releases, but updates between major releases are not guaranteed to be mirrored.
+
 [![doi](https://img.shields.io/badge/doi-10.1051/0004--6361/202348293-blue?logo=DOI&logoColor=white)](https://ui.adsabs.harvard.edu/abs/2024A%26A...684A..41G/abstract)
 
 ![version](https://img.shields.io/badge/version-2024.02-orange)
